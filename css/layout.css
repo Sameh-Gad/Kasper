@@ -1,0 +1,135 @@
+/* ========== Layout: Containers ========== */
+.container {
+  padding-inline: var(--container-padding);
+  margin-inline: auto;
+  width: min(100%, 1200px);
+}
+
+/* ========== Layout: Header ========== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #eee;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 25px;
+}
+
+header nav a {
+  font-weight: 600;
+  transition: color var(--main-duration);
+}
+
+header nav a:hover,
+header nav a.active {
+  color: var(--main-color);
+}
+/* ========== Layout: Hero Section ========== */
+.landing {
+  position: relative;
+  height: 100vh;
+  background-image: url('../images/landing.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  text-align: center;
+}
+
+.landing .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.landing .text {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 20px;
+}
+
+/* ========== Layout: Sections ========== */
+section {
+  padding-block: var(--section-padding);
+}
+
+section .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+section .section-title h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+section .section-title h2::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 60%;
+  margin: 8px auto 0;
+  background-color: var(--main-color);
+}
+/* ========== Layout: Footer ========== */
+footer {
+  background-color: #111;
+  color: var(--white-color);
+  padding-block: 40px;
+  text-align: center;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+footer .social-icons a {
+  color: var(--white-color);
+  font-size: 18px;
+  transition: color var(--main-duration);
+}
+
+footer .social-icons a:hover {
+  color: var(--main-color);
+}
+
+footer p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* ========== Layout: Responsive ========== */
+@media (width < 577px) {
+  html { font-size: 14px; }
+  header .container { flex-direction: column; gap: 10px; }
+}
+
+@media (577px <= width < 993px) {
+  html { font-size: 15px; }
+}
+
+@media (width >= 993px) {
+  html { font-size: 16px; }
+}

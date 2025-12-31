@@ -1,0 +1,62 @@
+/* ========== Base Reset ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  color: var(--main-text-color);
+  background-color: var(--white-color);
+}
+
+/* ========== Variables ========== */
+:root {
+  --main-color: #19c8fa;
+  --secondary-color: #777;
+  --section-padding: 60px;
+  --main-duration: 0.3s;
+  --container-padding: 15px;
+  --white-color: #fff;
+  --main-text-color: #333;
+}
+
+/* ========== Typography ========== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--main-text-color);
+}
+
+p {
+  color: var(--secondary-color);
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ========== Utilities ========== */
+::selection {
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

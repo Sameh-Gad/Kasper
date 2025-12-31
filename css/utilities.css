@@ -1,0 +1,55 @@
+/* ========== Utilities: Scroll To Top ========== */
+.scroll-top {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--main-duration);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* ========== Utilities: Animations ========== */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ========== Utilities: Safe Area Insets ========== */
+@supports (padding: max(0px)) {
+  body {
+    padding-inline: max(0px, env(safe-area-inset-left)) max(0px, env(safe-area-inset-right));
+  }
+
+  header, footer {
+    padding-inline: max(15px, env(safe-area-inset-left)) max(15px, env(safe-area-inset-right));
+  }
+}
+/* ========== Utilities: Helpers ========== */
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.rounded {
+  border-radius: 6px;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

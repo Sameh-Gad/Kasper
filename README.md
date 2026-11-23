@@ -7,9 +7,6 @@
 ## 🔗 Live Demo
 Check out the live project here: [Kasper Live Preview](https://kasperagency.netlify.app/)
 
-## 📸 Screenshot
-![Kasper Preview](./img/screenshot.png)
-
 ## ✨ Key Features
 * **Fully Responsive:** Beautifully adapts to desktop, tablet, and mobile screens.
 * **Modern UI/UX:** Clean and professional layout suitable for digital agencies.
